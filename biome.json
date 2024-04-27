@@ -8,5 +8,11 @@
 		"rules": {
 			"recommended": true
 		}
+	},
+	"formatter":{
+		"include": [
+			"./src/**/*.stories.tsx",
+			"./src/**/*.stories.ts"
+		]
 	}
 }

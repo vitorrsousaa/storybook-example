@@ -1,0 +1,46 @@
+import {Meta, Canvas, Story, Controls} from '@storybook/blocks';
+import * as ButtonStories from  './Button.stories'
+
+<Meta of={ButtonStories} />
+
+# Welcome to button documentation
+
+This is the documentation for the button component. Here you can find all the information you need to use the button component.
+
+## Button
+
+The button component is a simple button that can be used to trigger actions.
+<Canvas of={ButtonStories.Secondary} />
+
+### Props
+
+{Object.entries(ButtonStories.Secondary).map(([key, value]) => {
+  return (
+    <details key={key}>
+      <summary>{key}</summary>
+      <pre>{JSON.stringify(value, null, 2)}</pre>
+    </details>
+  )
+})}
+
+
+Given this code :
+```ts
+<Button
+  size="default"
+  variant="secondary"
+>
+  <span className="mr-1">
+    🔥
+  </span>
+  Secondary
+</Button>
+```
+
+This will be the result:
+<Story of={ButtonStories.Secondary} />
+
+
+### Api
+
+<Controls />
